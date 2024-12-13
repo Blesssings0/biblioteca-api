@@ -22,3 +22,11 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
 });
+
+// Middleware para rutas no definidas
+app.use((req, res, next) => {
+  res.status(404).json({
+      error: "Lo sentimos, la ruta solicitada no existe. Verifica la URL e intenta nuevamente."
+  });
+});
+
