@@ -1,6 +1,6 @@
-const express = require('express');
-const Biblioteca = require('../controllers/biblioteca');
-const router = express.Router();
+import { Router } from 'express';
+import Biblioteca from '../controllers/biblioteca';
+const router = Router();
 
 router.get('/', (req, res) => {
   const libros = Biblioteca.listarLibros();
@@ -17,4 +17,4 @@ router.get('/nodisponibles', (req, res) => {
   res.json(libros);
 });
 
-module.exports = router;
+export default router;

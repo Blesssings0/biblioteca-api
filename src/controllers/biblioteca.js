@@ -1,21 +1,21 @@
-const data = require('../data/data.json'); // Cargar datos iniciales
+import { autores, libros } from '../data/data.json'; // Cargar datos iniciales
 
 class Biblioteca {
   static listarAutores() {
-    return data.autores;
+    return autores;
   }
 
   static listarLibros() {
-    return data.libros;
+    return libros;
   }
 
   static librosDisponibles() {
-    return data.libros.filter(libro => libro.disponible);
+    return libros.filter(libro => libro.disponible);
   }
 
   static librosNoDisponibles() {
-    return data.libros.filter(libro => !libro.disponible);
+    return libros.filter(libro => !libro.disponible);
   }
 }
 
-module.exports = Biblioteca;
+export default Biblioteca;

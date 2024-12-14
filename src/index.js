@@ -1,13 +1,13 @@
 // Importar módulos necesarios
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import { json } from 'body-parser';
 
 // Crear una instancia de Express
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware para parsear JSON
-app.use(bodyParser.json());
+app.use(json());
 
 // Datos en memoria
 let autores = [

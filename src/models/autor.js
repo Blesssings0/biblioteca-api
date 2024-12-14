@@ -5,4 +5,4 @@ class Autor {
   }
 }
 
-module.exports = Autor;
+export default Autor;
